@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.21.1 - Quarry control and autocrafting loop fix
+
+### Added
+- **Quarry Planner**: mark two corners, then right-click a Quarry to dig exactly that rectangle (up to 65 x 65) from the higher corner down.
+
+### Fixed
+- **Autocrafting loops**: the planner no longer uses the item it's making as an ingredient further down the same chain. For example, it won't pulverize stored gold ingots just to smelt them back into gold ingots, which a Stock Keeper would repeat forever. Such requests now show as "can't craft".
+- The **Quarry** now only pushes mined items out through faces set to Out (or In + Out) in its Sides window.
+
+### Changed
+- Author is now BobRoflza.
+
 ## 1.21.0 - Machine upgrades
 
 ### Added
