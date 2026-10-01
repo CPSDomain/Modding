@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.21.0 - Machine upgrades
+
+### Added
+- **Upgrades window** on every machine with upgrades (the green arrow button). It holds Speed and Energy cards and shows the Muffler and the machine's tier.
+- **Tier Installers** (Advanced, Elite, Ultimate, Quantum): right-click to upgrade the Electric Furnace, Pulverizer, Compressor, Electric Sawmill, Ore Purifier or Rock Crusher in place, so it runs 3 / 5 / 7 / 9 operations at once. Install them in order. Power scales with how many run. Installers drop back out when the machine is broken.
+- **Muffler**: right-click any machine to silence it, and remove it from the Upgrades window.
+- Jade shows a machine's tier and whether it's muffled.
+
+### Changed
+- Upgrade cards stack to **8** per slot (was 4).
+- **Efficiency Upgrade** is renamed **Energy Upgrade**. It's the same item and effect (-15% power each).
+- Upgrade slots moved from the left of machine screens into the Upgrades window. Existing upgrades stay in place.
+
 ## 1.20.0 - Gas system part 2: oxygen steel and biogas
 
 ### Added
