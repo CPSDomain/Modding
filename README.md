@@ -1,4 +1,17 @@
-# Changelog
+# Changelog - Tiered Industries (formerly Tiered Power)
+
+## 1.22.0 - Disk partitioning and storage security
+
+### Added
+- **Disk Workbench**: partition a Storage or Fluid Disk to up to 18 chosen items or fluids (empty = anything), with Fill-from-contents and Clear. Set a priority from -9 to +9. Settings are stored on the disk.
+- Storing now fills **higher-priority disks first**. At the same priority, disks already holding the item come first, then disks partitioned for it, then the fullest.
+- **Security Terminal**: locks a storage network to its owner (the placer) and trusted players, added by name. Others can't open its terminals, Drive Bays, buses, assemblers or Stock Keeper; can't use or link wireless terminals; can't break its blocks; and can't place storage parts, pipes or inventories against it. Only the owner can break the terminal, and server operators always have access. Networks without one are unchanged.
+
+## 1.21.2 - Tiered Industries
+
+### Changed
+- The mod is now called **Tiered Industries**: mod list, guidebook, creative tabs, key bindings and the web guide. The internal id stays `tieredpower`, so existing worlds, items, configs and the jar's file name are unaffected.
+- The web guide has a **Roadmap** section: what's done, what's next, and ideas.
 
 ## 1.21.1 - Quarry control and autocrafting loop fix
 
