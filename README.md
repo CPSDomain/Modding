@@ -1,4 +1,18 @@
-READ / Download the HTML file to see what the mod does.# Changelog# Changelog
+READ / Download the HTML file to see what the mod does.# Changelog# Changelog.
+
+# Changelog
+
+## 1.19.0 - Gas system: fusion fuel, air separation, nitrogen cooling
+
+### Added
+- New gases: **Deuterium**, **Tritium** and **Nitrogen**.
+- **Isotope Separator**: water -> deuterium (50:1), 400 FE/t.
+- **Tritium Breeder**: lithium ingot -> 250 mB tritium, next to a running fission reactor. No power needed.
+- **Air Separator**: power -> nitrogen (16 mB/t) + oxygen (4 mB/t). Needs open air.
+- **Cryo Injector**: feeds nitrogen (20 mB/t) to a fission reactor for +50% power.
+
+### Changed
+- **Fusion Reactors** (single-block and multiblock) take deuterium and tritium by pipe: 250 mB of each equals one pair of cells. Gas is burned before cells, and cells still work.
 
 ## 1.18.0 - Storm Caller and quality of life
 
