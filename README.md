@@ -1,6 +1,14 @@
-READ / Download the HTML file to see what the mod does.# Changelog# Changelog.
-
 # Changelog
+
+## 1.20.0 - Gas system part 2: oxygen steel and biogas
+
+### Added
+- **Methane** gas (biogas).
+- **Oxygen Furnace**: 1 iron ingot or dust + 100 mB oxygen -> 1 steel ingot in 3 s at 80 FE/t, with no coal.
+- **Bio-Digester**: crops, seeds, saplings, leaves, flowers, rotten flesh and more -> 80 mB methane each, with no power needed. What it accepts is set by the `tieredpower:biomass` item tag.
+
+### Changed
+- The **Gas Burner Generator** also burns methane: 12 FE/mB, or 15 with the same amount of oxygen. Hydrogen is still burned first.
 
 ## 1.19.0 - Gas system: fusion fuel, air separation, nitrogen cooling
 
