@@ -1,5 +1,12 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.23.0 - Reactor extras and more tiered machines
+
+### Added
+- **Reactor Gauge**: placed against a Fission Reactor or Fission Controller, its face shows heat %, FE/t, status (Running / Idle / SCRAM) and fitted add-ons. Its comparator output follows heat (0-15).
+- **Neutron Reflector**: right-click a fission reactor so its fuel rods last 50% longer. Shown in Jade; drops back out when the reactor is broken.
+- **Tier Installers** now also work on the **Alloy Smelter** and **Fluid Mixer** (3 / 5 / 7 / 9 at once).
+
 ## 1.22.0 - Disk partitioning and storage security
 
 ### Added
