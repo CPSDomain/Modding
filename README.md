@@ -1,5 +1,13 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.24.0 - Chemical ore processing
+
+### Added
+- **Chlorine** gas and **Salt** (tagged forge:dusts/salt).
+- **Salt Evaporator**: 1,000 mB water -> 1 salt (5 s, 40 FE/t).
+- **Brine Electrolyzer**: 1 salt + 500 mB water -> 250 mB chlorine + 250 mB hydrogen (2 s, 200 FE/t).
+- **Chemical Washer**: 1 ore or raw ore + 100 mB chlorine + 500 mB water -> 4 dust (6 s, 300 FE/t). It works on every ore the Ore Purifier handles, including other mods' ores, and takes Tier Installers.
+
 ## 1.23.0 - Reactor extras and more tiered machines
 
 ### Added
