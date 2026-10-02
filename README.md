@@ -1,5 +1,10 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.27.2 - Charger actually charges
+
+### Fixed
+- The **Charger** accepted items but never charged them: its energy buffer is closed for output (like every machine's), so the transfer it used always moved 0 FE. It now gives the item energy straight from its own buffer, up to 8,000 FE/t. The Wireless Charger was already doing this correctly.
+
 ## 1.27.1 - Charger fix
 
 ### Fixed
