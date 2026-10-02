@@ -1,5 +1,13 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.27.1 - Charger fix
+
+### Fixed
+- The **Charger** refused an empty jetpack (and possibly other FE items). It now recognises this mod's powered items (jetpacks, Quantum Suit, drills, chainsaws, Portable Battery) directly, and accepts any item with an energy store that has room. The **Wireless Charger** uses the same lookup.
+
+### Added
+- Holding an item over the Charger's input slot that it won't accept now shows why in a red tooltip.
+
 ## 1.27.0 - Smithing and charging in autocrafting
 
 ### Added
