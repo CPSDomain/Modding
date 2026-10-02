@@ -1,4 +1,94 @@
-# Changelog
+# Changelog - Tiered Industries (formerly Tiered Power)
+
+## 1.27.0 - Smithing and charging in autocrafting
+
+### Added
+- **Smithing Press**: a powered smithing table (netherite upgrades, armour trims, other mods' smithing recipes). Each input only goes into the slot a recipe uses it in, so assemblers and pipes can feed it. Use it with processing patterns, for example from JEI's + on a smithing recipe.
+- **Charging patterns**: in Processing mode the Pattern Encoder's ⚡ button fills energy items in the outputs to full. With the same item as input, an assembler touching a Charger sends the item in and takes it back fully charged.
+- **Quantum Power Core**: 4 Quantum Alloy + 4 Superconductor + an Ultimate Battery Box.
+
+### Changed
+- The **Quantum Suit** uses a Quantum Power Core instead of a Quantum Energy Cell. That removes the 20 Nether Stars and about 64 netherite from the full suit, and the whole suit can now be autocrafted.
+- **Crafting patterns ignore charge**: a charged copy of an energy item (jetpack, tool, battery box or energy cell that kept its charge) in storage counts like an empty one, just as at a crafting table. Enchanted or renamed items are never used this way. Processing patterns stay exact, so charging patterns still work.
+- The web guide has a **Changelog** section built from this file.
+
+## 1.26.0 - Quantum Suit
+
+### Added
+- **Quantum Suit** (helmet, chestplate, leggings, boots): powered armour tougher than netherite (20 armour, 16 toughness for the full set). Each piece stores FE (10M, chestplate 20M) and charges in a Charger or near a Wireless Charger.
+  - Helmet: night vision and water breathing (20 FE/t).
+  - Chestplate: built-in jetpack, the fastest in the mod (120 FE/t while thrusting).
+  - Leggings: Speed II (10 FE/t).
+  - Boots: no fall damage, plus step assist (walk up full blocks).
+  - **Energy shield**: each charged piece absorbs 22.5% of damage (90% for the full suit) at 1,000 FE per point absorbed. Damage that bypasses invulnerability (/kill, the void) isn't shielded.
+- The creative tab has both empty and fully charged suit pieces.
+
+## 1.25.0 - Nuclear fuel cycle
+
+### Added
+- **Plutonium**: the Chemical Washer reprocesses a Depleted Fuel Rod (with chlorine and water) into 1 Plutonium Dust. Smelt it into Plutonium Ingots.
+- **MOX Fuel Rod**: steel + 2 uranium + 1 plutonium makes 2. Works in both Fission Reactors and their Fuel Ports. Lasts twice as long, with +50% power and +50% heat. The multiblock burns MOX first. Depletes into a normal depleted rod.
+
+### Fixed
+- The **craft request screen**'s plan list ran under the Back/Start buttons and overlapped the "scroll for more" hint. The list now sits in its own clipped box above the buttons (7 rows), with a scrollbar and an "x-y of n" counter.
+
+## 1.24.1 - Reactor Gauge in reactor walls
+
+### Changed
+- The **Reactor Gauge** is now a multiblock part: build it into a Fission Reactor's wall in place of any Casing or Glass block (not edges or corners), and the reactor still forms. The controller links it, so it shows the reactor's status from anywhere on the walls. Placing it against a single-block reactor still works.
+
+## 1.24.0 - Chemical ore processing
+
+### Added
+- **Chlorine** gas and **Salt** (tagged forge:dusts/salt).
+- **Salt Evaporator**: 1,000 mB water -> 1 salt (5 s, 40 FE/t).
+- **Brine Electrolyzer**: 1 salt + 500 mB water -> 250 mB chlorine + 250 mB hydrogen (2 s, 200 FE/t).
+- **Chemical Washer**: 1 ore or raw ore + 100 mB chlorine + 500 mB water -> 4 dust (6 s, 300 FE/t). It works on every ore the Ore Purifier handles, including other mods' ores, and takes Tier Installers.
+
+## 1.23.0 - Reactor extras and more tiered machines
+
+### Added
+- **Reactor Gauge**: placed against a Fission Reactor or Fission Controller, its face shows heat %, FE/t, status (Running / Idle / SCRAM) and fitted add-ons. Its comparator output follows heat (0-15).
+- **Neutron Reflector**: right-click a fission reactor so its fuel rods last 50% longer. Shown in Jade; drops back out when the reactor is broken.
+- **Tier Installers** now also work on the **Alloy Smelter** and **Fluid Mixer** (3 / 5 / 7 / 9 at once).
+
+## 1.22.0 - Disk partitioning and storage security
+
+### Added
+- **Disk Workbench**: partition a Storage or Fluid Disk to up to 18 chosen items or fluids (empty = anything), with Fill-from-contents and Clear. Set a priority from -9 to +9. Settings are stored on the disk.
+- Storing now fills **higher-priority disks first**. At the same priority, disks already holding the item come first, then disks partitioned for it, then the fullest.
+- **Security Terminal**: locks a storage network to its owner (the placer) and trusted players, added by name. Others can't open its terminals, Drive Bays, buses, assemblers or Stock Keeper; can't use or link wireless terminals; can't break its blocks; and can't place storage parts, pipes or inventories against it. Only the owner can break the terminal, and server operators always have access. Networks without one are unchanged.
+
+## 1.21.2 - Tiered Industries
+
+### Changed
+- The mod is now called **Tiered Industries**: mod list, guidebook, creative tabs, key bindings and the web guide. The internal id stays `tieredpower`, so existing worlds, items, configs and the jar's file name are unaffected.
+- The web guide has a **Roadmap** section: what's done, what's next, and ideas.
+
+## 1.21.1 - Quarry control and autocrafting loop fix
+
+### Added
+- **Quarry Planner**: mark two corners, then right-click a Quarry to dig exactly that rectangle (up to 65 x 65) from the higher corner down.
+
+### Fixed
+- **Autocrafting loops**: the planner no longer uses the item it's making as an ingredient further down the same chain. For example, it won't pulverize stored gold ingots just to smelt them back into gold ingots, which a Stock Keeper would repeat forever. Such requests now show as "can't craft".
+- The **Quarry** now only pushes mined items out through faces set to Out (or In + Out) in its Sides window.
+
+### Changed
+- Author is now BobRoflza.
+
+## 1.21.0 - Machine upgrades
+
+### Added
+- **Upgrades window** on every machine with upgrades (the green arrow button). It holds Speed and Energy cards and shows the Muffler and the machine's tier.
+- **Tier Installers** (Advanced, Elite, Ultimate, Quantum): right-click to upgrade the Electric Furnace, Pulverizer, Compressor, Electric Sawmill, Ore Purifier or Rock Crusher in place, so it runs 3 / 5 / 7 / 9 operations at once. Install them in order. Power scales with how many run. Installers drop back out when the machine is broken.
+- **Muffler**: right-click any machine to silence it, and remove it from the Upgrades window.
+- Jade shows a machine's tier and whether it's muffled.
+
+### Changed
+- Upgrade cards stack to **8** per slot (was 4).
+- **Efficiency Upgrade** is renamed **Energy Upgrade**. It's the same item and effect (-15% power each).
+- Upgrade slots moved from the left of machine screens into the Upgrades window. Existing upgrades stay in place.
 
 ## 1.20.0 - Gas system part 2: oxygen steel and biogas
 
