@@ -1,5 +1,334 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.50.3 - Matrix crafting without assemblers
+
+### Fixed
+- Starting a craft said "Add a Molecular Assembler with patterns to the network" even when an Assembly Matrix held the patterns. A network with only a Matrix (plus Machine Connectors or buses on the machines) now crafts as it should; Molecular Assemblers are optional.
+
+## 1.50.2 - Buses work with the Matrix
+
+### Fixed
+- Machines with only an **Import Bus** or **Export Bus** on them didn't count as connected, so the Assembly Matrix couldn't use them. Buses now work as machine interfaces too: they appear in **Connected machines** and the Matrix sends pattern inputs through them.
+- Results an Import Bus pulls out of a machine into storage now count towards the running craft, so the job doesn't wait forever for output the bus already took.
+- A bus only reaches the block it faces, so a bus between two machines doesn't pick up the wrong one.
+
+## 1.50.1 - Matrix fixes and no mobs in multiblocks
+
+### Fixed
+- Big storage networks: the network scan stopped after 2,048 blocks, so machines connected far from the controller (for example Alloy Smelters) never showed in the Matrix and couldn't be used for crafting. The limit is now 32,768.
+- Mobs no longer spawn on machines, Matrix parts, Pattern Banks, Accelerators, reactor and bank casings, or solar/wind panels, so they can't spawn inside a multiblock.
+- The Assembly Matrix interior now ignores grass, snow layers and other replaceable blocks instead of refusing to form.
+
+### Added
+- Matrix **Connected machines** panel: warns when the network is too big, and lists any Machine Connector that isn't touching a machine, with its position.
+- Right-click a **Machine Connector** with an empty hand to see whether it's linked to the network and which machine it serves.
+
+## 1.50.0 - Logic Controller
+
+### Added
+- **Logic Controller**: joins the storage network and runs up to 4 rules: IF a condition THEN a redstone signal out of a chosen side (or all sides).
+  - **Item**: how many of an item storage holds, below or above a number.
+  - **Power**: how full the batteries touching the controller are, in percent.
+  - **Redstone**: the controller is receiving a signal.
+- Each rule shows a light (lit when true) and its current reading on hover. Rules are checked twice a second.
+
+## 1.49.0 - Energy Core
+
+### Added
+- **Energy Core**: a steel cage with a glowing orb inside that grows, brightens and spins faster as it fills, coloured by tier.
+  - Five tiers: 1 billion FE (I), 10 billion, 100 billion, 1 trillion, 10 trillion FE (V).
+  - **Core Upgrades** II-V: right-click the core, in order.
+  - Keeps its tier and energy when broken. Comparator output by fill.
+- **Input Pylon** and **Output Pylon**: link to the nearest core within 8 blocks by themselves. Each moves 1M FE/t at tier I up to 256M FE/t at tier V, with sparks travelling along the link. Output Pylons push into anything touching them.
+- Jade and right-click readouts for the core and pylons.
+
+## 1.48.0 - Liquid Experience
+
+### Added
+- **Liquid Experience** (20 mB = 1 XP point), with a bucket. It glows faintly when poured out.
+- The **Mob Grinder** pushes the XP it collects into tanks and machines next to it as Liquid Experience, and pipes can pull it out. Right-clicking to collect XP still works.
+- The **Enchanting Machine** has an XP tank (16,000 mB). With 40 mB per enchantment level in the tank, it enchants on XP instead of power, twice as fast. Without XP it runs on power as before.
+
+## 1.47.1 - 3D gas cylinders
+
+### Changed
+- The **Gas Cylinder** is now a 3D canister: rounded steel body, a shoulder coloured by the gas inside, and a brass valve and handle. It shows up that way in hand, on the ground, in item frames and in the inventory.
+
+## 1.47.0 - Biodiesel
+
+### Added
+- **Bio Refinery**: seeds (sunflowers best) are pressed into plant oil, and sugary crops are fermented into ethanol. They blend 1:1 into **Biodiesel**, which is pushed out to Fluid Pipes. 20 FE/t.
+- **Diesel Generator**: burns 1 mB a tick. Biodiesel 200 FE/t, Rocket Fuel 300 FE/t, Creosote Oil 40 FE/t. Holds 200,000 FE and pushes out of every side.
+- **Biodiesel** liquid and bucket.
+
+## 1.46.0 - Gas containers, 3D Digital Miner
+
+### Added
+- **Gas Cylinder**: a handheld bottle for 8,000 mB of one gas. Right-click a machine or tank to fill or empty it. Its shoulder is coloured by the gas. The creative tab has a full one of every gas.
+- **Gas Tank**: a pressure cylinder for 64,000 mB of one gas. Pipes connect on any side, and it keeps its contents when broken.
+
+### Changed
+- The **Digital Miner** is a 3D drilling rig: base plate, corner struts, radar screen, antenna and drill.
+
+## 1.45.0 - Coke Oven, Industrial Blast Furnace, flat buses
+
+### Added
+- **Coke Oven** (no power): coal -> **Coal Coke** + 250 mB **Creosote Oil** (30 s); logs -> charcoal + 125 mB Creosote (15 s). Coal Coke burns twice as long as coal.
+- **Industrial Blast Furnace** (no power): iron ingot + Coal Coke -> steel ingot (20 s).
+- **Creosote Oil** (pipes or buckets) and **Treated Planks** (8 planks + a Creosote bucket).
+- JEI pages for both machines.
+
+### Changed
+- **Import Bus** and **Export Bus** are now flat plates against the inventory, with cable stubs, so Storage Cable joins up neatly like the other panels.
+
+## 1.44.1 - Build fix
+
+### Fixed
+- Compile error in 1.44.0: the Digital Miner used `ItemStack.hashItemAndTag`, which doesn't exist in Minecraft 1.20.1. It now fingerprints its slots from each item and its data.
+
+## 1.44.0 - Digital Miner
+
+### Added
+- **Digital Miner**: a quarry that mines only the ores you choose.
+  - Item Filters in its slots pick the ores (none = every ore).
+  - An Enchanted Book of Silk Touch or Fortune I-III sets how they're mined (not used up).
+  - It scans a 33x33 area under itself, layer by layer down to the bottom of the world, mining only wanted ores (800 FE each, up to 4 a second) and leaving everything else in place.
+  - Changing the filters or book rescans from the top. The front's radar animates while mining. Jade shows its progress.
+
+## 1.43.0 - Greenhouse system
+
+### Added
+- **Sprinkler**: hangs above crops and runs on water (pipe or bucket, 20 mB a second). It keeps farmland in a 9x9 area up to 6 below wet and gives a 15% chance of extra growth each second, with a shower of water.
+- **Grow Lamp**: hanging lamp, 40 FE/t. Full light (crops grow indoors and at night) and a 10% chance of extra growth each second. The bulb glows when powered.
+- **Fertilizer** (2 bone meal + rotten flesh + dirt -> 4): three bone meal in one. The **Crop Farmer** now takes it in its seed slots and fertilises unripe crops automatically.
+- **Greenhouse Glass**: green-framed glass for building the greenhouse.
+
+## 1.42.0 - Plenisher, Block Mover, Ore Scanner, drill filters
+
+### Added
+- **Fluidic Plenisher**: fills the space below and around it with piped-in fluid. One source block every half second (1,000 mB + 100 FE), up to 32 blocks, never above itself.
+- **Block Mover**: picks up a chest, machine or tank with its contents and puts it down elsewhere, contents intact.
+- **Ore Scanner**: powered handheld. Lists ores within 16 blocks with counts and the direction and distance to the nearest of each (5,000 FE per scan).
+- **Laser Drill filters**: Item Filters in the drill's input slots block (or allow) ores.
+- **Item Filter "Name" mode**: matches items whose id starts with the same word, so one deepslate ore blocks every `deepslate_...` ore. This works on pipes too.
+
+## 1.41.0 - Automated brewing, gem ore processing
+
+### Added
+- **Brewing Machine**: 3 bottle slots, an ingredient slot and 3 outputs.
+  - Fills glass bottles from its own water tank (piped or bucket), then brews all three with one ingredient: 5 s, 20 FE/t, no blaze powder.
+  - Every vanilla potion and modded brewing.
+  - JEI's + on a brewing recipe makes a 3-bottle pattern for autocrafting.
+- **Pulverizer and Ore Purifier recipes** for redstone, lapis, coal, diamond, emerald, nether quartz and ancient debris ores. They use ore tags, so **deepslate** and other mods' variants work too, and the Chemical Washer picks them up automatically.
+
+### Fixed
+- Deepslate redstone ore (and the other gem/dust ores) couldn't be pulverized, purified or washed: those ores had no recipes at all.
+
+## 1.40.0 - Radiation and Hazmat Suit
+
+### Added
+- **Radiation**, off by default: set `[radiation] enabled = true` in the config, with `strength` as a percentage.
+  - Running fission reactors within 16 blocks and carried nuclear materials (depleted rods, plutonium, MOX, uranium) build up a dose that fades when you're clear.
+  - Effects: nausea at 100 rad, weakness and hunger at 300, poison at 600, damage from 1,000. Dying resets it.
+- **Hazmat Suit** (4 pieces, 25% protection each).
+- **Radiation Shielding Module** for the Quantum Chestplate (100% protection).
+- **Geiger Counter**: hold it for exposure and dose readings, with clicks.
+- **Iodine Tablets**: -300 rad each.
+
+### Fixed
+- The **Pattern Encoder**'s Machine slot sat under the Encode button and couldn't be clicked. It's now bottom-left (labelled "Machine"), and its tooltip wraps.
+
+## 1.39.0 - Orbital Mining Laser
+
+### Added
+- **Mining Satellite**: a second Rocket payload.
+- **Laser Drill**: place it under open sky and it claims one of your Mining Satellites. While powered, a laser beam comes down from orbit and it drills one ore a second (2,000,000 FE each, about 100,000 FE/t). Ores come from the `forge:ores` tag, other mods' ores included, with rare ores rarer.
+- **Laser Lenses** (iron, copper, gold, redstone, diamond, uranium): in the drill's input slots, each makes its ore x10 as likely. They stack.
+- Satellites now have a type: Receiver Dishes claim Solar Satellites and Laser Drills claim Mining Satellites. Existing satellites stay solar.
+
+## 1.38.1 - Rocket liquid buckets
+
+### Added
+- **Buckets** of **Rocket Fuel**, **Liquid Methane** and **Liquid Oxygen**, in the creative tab and filled from the machines' tanks like any bucket. The liquids can also be poured into the world.
+- The **Launch Controller**, **Cryogenic Condenser** and **Fuel Refinery** accept buckets (and other fluid containers) on right-click. A rocket needs 16 buckets of Rocket Fuel.
+
+## 1.38.0 - Rocket program, part 2: launch and orbit
+
+### Added
+- The **launch site**:
+  - **Launch Pad**: hazard-striped deck plates, 3x3.
+  - **Launch Tower**: steel lattice with diagonal bracing.
+  - **Launch Controller**: desk console with an angled screen.
+- Put a **Rocket** and a **Solar Satellite** in the controller and pipe in 16,000 mB of Rocket Fuel. The rocket stands on the pad.
+- Press **LAUNCH**: a 10-second countdown, then lift-off with flame and smoke. The satellite reaches orbit and the server is told. A checklist on the screen shows what's missing.
+- **Receiver Dish** (tilted dish on a post): right-click to claim one of your satellites for about 100,000 FE/t, day and night. Sneak + right-click releases it. Holds 10M FE and pushes out of every side.
+- The **Rocket** has a 3D model (body, nose cone, fins, engine bell), used for the item and on the pad.
+- Config: `satelliteOutput`. Jade and the Multimeter show the dish's output.
+
+## 1.37.0 - Rocket program, part 1: fuel and parts
+
+### Added
+- **Liquid Methane**, **Liquid Oxygen** and **Rocket Fuel**: liquids, so they go in Fluid Pipes.
+- **Cryogenic Condenser**: 40 mB methane or oxygen + 4 mB nitrogen + 200 FE -> 20 mB of the liquid.
+- **Fuel Refinery**: 10 mB Liquid Methane + 20 mB Liquid Oxygen + 100 FE -> 30 mB Rocket Fuel.
+- Rocket parts from existing machines:
+  - **Hull Plate**: Compressor, 4 steel plates.
+  - **Rocket Engine**: Smithing Press, Rocket Nozzle + netherite template + Quantum Alloy.
+  - **Fuel Tank Section**, **Guidance Computer** and **Nose Cone**.
+- The **Rocket** and the **Solar Satellite** payload.
+- JEI pages for both new machines.
+
+The Launch Pad, launch and Receiver Dish come in part 2.
+
+## 1.36.0 - Quantum Suit modules
+
+### Added
+- **Quantum Suit modules**: wear the piece and right-click the module to fit it.
+  - **Magnet** (chestplate): pulls items and XP orbs from 8 blocks. Sneak to pause it.
+  - **Flight** (chestplate): creative-style flight while charged, 100 FE/t while flying.
+  - **Auto-Feed** (helmet): eats the most filling safe food when you're hungry.
+  - **Jump Boost** (leggings): about three-block jumps.
+  - **Water Walking** (boots): walk on water. Sneak to go under.
+- **Suit Modules key** (default **V**): a screen listing fitted modules with On/Off and Remove (the module is returned).
+
+## 1.35.0 - New logistics
+
+### Added
+- **Wireless Sender** and **Wireless Receiver**: item and fluid transport at any distance, across dimensions. The Sender holds 9 item slots and a 16,000 mB tank. Each linked Receiver takes up to 32 items and 2,000 mB twice a second and pushes them into its neighbours. Link them with the Wireless Linker.
+- **Item Buffer** (27 slots) and **Fluid Buffer** (32,000 mB): fill from any side except the front, and push out of the front (16 items / 4 ticks, or 1,000 mB / tick).
+- Jade shows each new block's state.
+
+### Changed
+- The **Power Linker** is now the **Wireless Linker**: it links Power Transmitters to Receivers and Wireless Senders to Receivers. Existing linkers keep working.
+
+## 1.34.0 - Polish and usability
+
+### Added
+- **JEI recipe pages** for the Chemical Washer, Oxygen Furnace, Salt Evaporator, Brine Electrolyzer, Bio-Digester, Isotope Separator, Air Separator, Tritium Breeder, Particle Collider and Antimatter Reactor. The Smithing Press is listed on vanilla smithing. JEI's + in the Pattern Encoder fills in the machine from these pages.
+- **Power history graph**: right-click a Power Monitor for generated / used / battery fill over the last 10 minutes or 2 hours, with hover values and auto-refresh. Sneak + right-click shows the old readout.
+- **Job steps**: in a terminal's Jobs screen, click a job to see each step: how many are left, how many are running, and on which machine.
+- **Config [endgame]** section: antimatter FE per mB, Particle Collider cost, Power Transmitter rate, Quantum Drill FE per block and Lightning Collector FE per strike.
+
+## 1.33.0 - Antimatter, fluid filters, Quantum Drill
+
+### Added
+- **Antimatter** gas, made by the **Particle Collider**: 10 mB deuterium + 10 mB tritium + 20,000 FE -> 1 mB antimatter, one per tick (more with Speed Upgrades).
+- **Antimatter Reactor**: burns antimatter at 50,000 FE per mB, up to 20 mB/t (1,000,000 FE/t). Holds 50M FE and pushes out of every side. That's 2.5x the power used to make the antimatter.
+- **Fluid Filter**: up to 9 fluids, Allow or Block, for fluid and gas pipe connections. Right-click a connection to install; sneak + right-click with an empty hand to remove. On Pull connections, an allow-list pulls just those fluids from tanks holding several.
+- **Quantum Drill**: drill + shovel + axe + hoe, very fast, mines 1x1 / 3x3 / 5x5 / 7x7 (shift + right-click to switch). 50M FE, 400 FE per block.
+
+### Changed
+- Drill area mining is generalised to any radius. The Advanced Drill still switches between 1x1 and 3x3.
+
+## 1.32.0 - Fusion upgrades
+
+### Added
+- **Plasma Coils Mk I, II, III**: right-click a Fusion Reactor or Fusion Controller, fitting them in order, for x2 / x3 / x4 output. Fuel burns x1.5 / x2 / x2.5 as fast, so you get more power per fuel pair at every tier. Coils drop back out when the reactor is broken. Jade shows the tier.
+- The **Reactor Gauge** now works on **Fusion Reactors**, single-block and multiblock (including built into the multiblock's walls). It shows plasma temperature, output and plasma tier.
+
+### Changed
+- The Fusion Controller's output limit is raised to 512,000 FE/t so a Mk III reactor can deliver its power.
+
+## 1.31.5 - Panels plug into cables, wavier power line
+
+### Fixed
+- **Panels and Storage Cable left a gap**: the panel sits flat against its machine, while the cable ends at the middle of the panel's block space. Panels (both terminal panels, the Assembler Panel and the Machine Connector) now draw a short cable piece from each side with Storage Cable back to the plate, so the cable visibly plugs in.
+
+### Changed
+- The power cables' glowing line is **thinner** (1 pixel) and animates as a smooth **travelling wave**: a bright pulse rolling along the cable.
+
+## 1.31.4 - Assembler Panel, see-through cables
+
+### Added
+- **Assembler Panel**: a flat Molecular Assembler (9 patterns, upgrades, same screen) that sticks onto a machine's face. Sneak + right-click to place it on a machine. It converts to and from a Molecular Assembler in the crafting grid.
+
+### Changed
+- **Power cables are see-through** (every tier). A **glowing yellow line** flows through them while power is moving, and goes dark when the network is idle. It updates about once a second.
+
+## 1.31.3 - Set a pattern's machine in the Matrix
+
+### Added
+- In the **Matrix Controller**, click a processing pattern while holding a machine's item to set which machine it runs on. There's no need to re-encode older patterns. Hovering a processing pattern with no machine shows a reminder.
+
+### Fixed
+- JEI's item list drew over the Matrix Controller's Connected machines panel.
+- The page arrows overlapped the page number.
+
+## 1.31.2 - Easier Matrix building
+
+### Changed
+- **Pattern Banks and Crafting Accelerators can take the place of any wall block** of the Assembly Matrix, as well as going inside. There's no need to open the box up to add them.
+
+## 1.31.1 - Matrix fixes, flat Machine Connector
+
+### Fixed
+- **Patterns could vanish** when put into a Matrix Controller with no Pattern Banks inside. The slots now refuse patterns until there's a Bank, and the screen says "Formed - put Pattern Banks inside".
+- The Matrix Controller's status line overlapped the "Inventory" label. It has its own row now.
+
+### Changed
+- The **Machine Connector** is now a **flat panel**, like the terminal panels. Sneak + right-click to stick it onto a machine's face, then connect Storage Cable to it.
+
+### Added
+- The **Matrix Controller** screen shows a **Connected machines** panel: every machine touching a Molecular Assembler or Machine Connector on the network, counted by type.
+
+## 1.31.0 - Assembly Matrix and Machine Connector
+
+### Added
+- **Assembly Matrix** multiblock: a hollow 3x3x3-7x7x7 box of **Matrix Casing** / **Matrix Glass** with a **Matrix Controller** in a wall, holding **Pattern Banks** (27 patterns each) and **Crafting Accelerators**. The controller's screen pages through the banks.
+  - Crafting patterns are crafted inside the Matrix: 2 per cycle, +2 per accelerator.
+  - Processing patterns run on any machine of the right type that a Molecular Assembler or Machine Connector touches, anywhere on the network, in parallel across machines.
+- **Machine Connector**: joins the machine it touches to the network for the Matrix's patterns. No slots, no screen, 4 operations per cycle.
+- Patterns can name their **Machine**. The Pattern Encoder (processing mode) has a Machine slot, and JEI's + fills it in for this mod's machines, furnace recipes and smithing. Pattern tooltips show it.
+
+### Changed
+- **Molecular Assemblers are back to 9 pattern slots.** Patterns from the extra slots added in 1.28.1 drop out beside the assembler the first time it loads, so nothing is lost.
+- Results from machines are now credited per job step (each step only takes what it's owed), so two jobs making the same item no longer grab each other's results.
+
+## 1.30.1 - Build fix
+
+### Fixed
+- Compile error in 1.30.0: the four automation machines' menu registrations referred to themselves by simple name inside their own initializer, which Java doesn't allow. They now refer to themselves through the class name.
+
+## 1.30.0 - Storage Monitor
+
+### Added
+- **Storage Monitor**: right-click it with an item to show that item and its live count in the storage network on its face (green when stocked, red at zero). Sneak + right-click with an empty hand to clear it. Comparator output: 0 at none, +1 per doubling up to 15, for low-stock alarms or redstone-triggered production. Respects storage security.
+
+## 1.29.0 - More automation
+
+### Added
+- **Block Breaker**: breaks the block in front once a second (diamond-pickaxe drops), 400 FE per block.
+- **Block Placer**: places blocks from its inputs in front, twice a second, 100 FE per block.
+- **Tree Farm**: plants saplings on a 9x9 patch in front, uses bone meal, and fells whole grown trees (logs and leaves) keeping everything. 200 FE per job.
+- **Animal Ranch**: on a 9x9 area in front, it breeds pairs with feed (up to 24 animals), shears sheep, milks cows into empty buckets, and collects eggs and feathers. 200 FE per job.
+- All four have 3 input slots, a 3x3 output buffer pushed into neighbouring inventories, Speed/Energy upgrades and redstone control.
+- The **Molecular Assembler**'s core is now animated: a swirl while working, a slow pulse when idle.
+
+## 1.28.1 - Bigger, see-through assemblers
+
+### Changed
+- **Molecular Assemblers hold 27 patterns** (3 rows of 9) instead of 9. Existing assemblers keep their patterns and upgrades where they were.
+- **Assemblers work from any face** of this mod's machines: the machine's Sides settings no longer apply to assemblers. Items still go into the right slots (ingredients in, results out). Other mods' machines still use their own sided rules.
+- **Transparent assemblers**: a glass case with a crafting core inside that glows while working.
+
+### Notes
+- Furnace recipes don't need patterns at all: an assembler touching an Electric Furnace gives the network every furnace recipe (since 1.27.3). Several assemblers can also share one machine.
+
+## 1.28.0 - Wireless power
+
+### Added
+- **Power Transmitter** and **Power Receiver**: link receivers to a transmitter with the **Power Linker** (right-click the transmitter, then each receiver). Receivers draw from their transmitter and push power into everything around them. Each transmitter supplies up to 64,000 FE/t in total, shared between its receivers, and both hold 1M FE. Works at any distance and **across dimensions** (10% loss). Both ends' chunks must be loaded. Jade shows each end's status.
+
+## 1.27.3 - Smarter autocrafting
+
+### Added
+- **Built-in smelting**: if any Molecular Assembler touches an Electric Furnace, the planner knows every furnace recipe without patterns. A missing Iron Ingot is smelted from raw iron, iron ore or iron dust in storage, whichever is most plentiful. Encoded patterns always take priority.
+- **Exact job status**: a stuck job names the machine it's waiting on (name and position), the ingredient it needs ("Needs 2 Raw Iron in storage"), a machine that won't take its inputs, or that no assembler holds the pattern. Shown after a couple of seconds in the Jobs screen.
+
+### Fixed
+- **Ore Purifier** (and any pattern made with JEI's + for a machine that uses water) never received anything from an assembler: the pattern listed water as an input and storage had none. Water now never counts as missing; it's sent if storage has some, otherwise the machine's own Sink or pipe supplies it.
+- Processing patterns now send whichever accepted ingredient is in stock, instead of only the first one encoded.
+
 ## 1.27.2 - Charger actually charges
 
 ### Fixed
