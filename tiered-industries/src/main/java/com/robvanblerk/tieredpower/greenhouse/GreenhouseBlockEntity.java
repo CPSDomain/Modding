@@ -51,6 +51,9 @@ public class GreenhouseBlockEntity extends BlockEntity {
 	public int getPlants() { return plants; }
 	public boolean isRunning() { return running; }
 
+	/** A sprinkler with water in it (running, or about to). */
+	public boolean hasWater() { return sprinkler && (running || water.getFluidAmount() > 0); }
+
 	public static void tick(Level level, BlockPos pos, BlockState state, GreenhouseBlockEntity be) {
 		if (!(level instanceof ServerLevel server)) return;
 		if (be.sprinkler) {

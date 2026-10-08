@@ -1,5 +1,5 @@
 {
- "version": "1.69.2",
+ "version": "1.69.4",
  "start": [
   {
    "title": "Coal",
@@ -2749,7 +2749,7 @@
     },
     {
      "id": "crop_farmer",
-     "text": "Tends a 9x9 area around itself at its own height. Harvests and replants ripe wheat, carrots, potatoes, beetroot and nether wart; harvests melons and pumpkins; cuts sugar cane and cactus, leaving the bottom block to regrow. Its three seed slots plant empty spots: crop seeds on farmland, nether wart on soul sand, melon and pumpkin seeds on farmland, sugar cane on sand or dirt next to water (sugar cane is its own seed - put a stack of sugar cane in), and cactus on sand. Fertilizer (or bone meal) goes in the slot on the far left: the farmer uses one on each plant it passes that is still growing - crops, stems, sugar cane, cactus and nether wart. Harvest is pushed into neighbouring chests. With Sprinklers and Grow Lamps it's the heart of a greenhouse.",
+     "text": "Tends a 9x9 area around itself at its own height. Harvests and replants ripe wheat, carrots, potatoes, beetroot and nether wart; harvests melons and pumpkins; cuts sugar cane and cactus, leaving the bottom block to regrow. Its three seed slots plant empty spots on its own level: crop seeds on farmland, nether wart on soul sand, melon and pumpkin seeds on farmland, cactus on sand, and Sugar Cane Seeds (or sugar cane) on sand, dirt or grass that has water right beside it - or on Irrigated Sand under a Sprinkler, with no water channel needed. Like crops, they sit on the ground one block below the farmer's level. Fertilizer or bone meal goes in the slot on the far left. The farmer grows each plant that is still growing by one step as it passes; one Fertilizer is good for 32 steps and bone meal for 8, so a stack of Fertilizer lasts a long time. Put it next to a storage cable and it restocks itself from your storage network: Fertilizer (or bone meal) and more of the seeds already in its slots. Harvest is pushed into neighbouring chests.",
      "stats": [
       [
        "Power",
@@ -2787,7 +2787,31 @@
     },
     {
      "id": "fertilizer",
-     "text": "Three bone meal in one (2 bone meal + rotten flesh + dirt makes 4). Right-click a plant to grow it a lot, or put it in a Crop Farmer's fertilizer slot: it then fertilises everything still growing as it passes - crops, melon and pumpkin stems, sugar cane, cactus and nether wart - one Fertilizer each. With Sprinklers and Grow Lamps overhead, a greenhouse turns out crops very quickly - feed the surplus to a Bio-Digester for methane."
+     "text": "Three bone meal in one (2 bone meal + rotten flesh + dirt makes 4). Right-click a plant to grow it a lot, or put it in a Crop Farmer's fertilizer slot: it then fertilises everything still growing as it passes - crops, melon and pumpkin stems, sugar cane, cactus and nether wart - one growth step each, 32 steps per Fertilizer. With Sprinklers and Grow Lamps overhead, a greenhouse turns out crops very quickly - feed the surplus to a Bio-Digester for methane."
+    },
+    {
+     "id": "sugar_cane_seeds",
+     "text": "One sugar cane makes two. Plant them like sugar cane: on sand, dirt or grass with water right beside that block (not on top of it) - or on Irrigated Sand under a Sprinkler, no water needed. The Crop Farmer plants them too.",
+     "stats": [
+      [
+       "From",
+       "1 sugar cane makes 2"
+      ]
+     ]
+    },
+    {
+     "id": "irrigated_sand",
+     "text": "Sand for greenhouses: sugar cane grows on it without a water channel, as long as a Sprinkler with water in it is overhead (within 4 blocks sideways and up to 8 blocks above). Water beside it works too, like normal sand, and cactus grows on it. It doesn't fall. Lay it where the farmland would go, in reach of the Crop Farmer, and the farmer plants Sugar Cane Seeds on it. 8 sand around a water bucket makes 8 (you get the bucket back).",
+     "stats": [
+      [
+       "Sugar cane",
+       "grows under a Sprinkler, no water needed"
+      ],
+      [
+       "Recipe",
+       "8 sand + water bucket = 8"
+      ]
+     ]
     },
     {
      "id": "greenhouse_glass",

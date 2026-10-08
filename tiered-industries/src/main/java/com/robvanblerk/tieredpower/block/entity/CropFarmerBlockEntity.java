@@ -42,6 +42,9 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 	public static final int TICKS_PER_SPOT = 4;
 	public static final int SEED_SLOTS = 3, OUTPUT_START = 3, OUTPUT_END = 12, FERTILIZER_SLOT = 14;
 
+	/** Growth left from the last Fertilizer or bone meal used: each pulse grows one plant one step. */
+	public static final int PULSES_PER_FERTILIZER = 32, PULSES_PER_BONE_MEAL = 8;
+	private int growthCharge;
 	private int index; // which spot in the area is next
 	private int progress;
 	private int harvested;
@@ -54,6 +57,7 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 				case 1 -> (energy.getEnergyStored() >>> 16) & 0xFFFF;
 				case 2 -> harvested & 0xFFFF;
 				case 3 -> energyCost(ENERGY_PER_TICK);
+				case 4 -> growthCharge;
 				default -> 0;
 			};
 		}
@@ -76,6 +80,7 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 		if (!(level instanceof ServerLevel server)) return;
 		if (be.preTick(level, pos, state)) return;
 
+		if (level.getGameTime() % 40 == 0) be.restock(level, pos);
 		if (level.getGameTime() % 10 == 0) {
 			for (int i = OUTPUT_START; i < OUTPUT_END; i++) {
 				ItemStack stack = be.items.get(i);
@@ -139,36 +144,82 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 	}
 
 	/**
-	 * Fertilizer (or bone meal) in the fertilizer slot - or, as before, in a seed slot - makes something that's still
-	 * growing grow. Fertilizer grows crops a lot (like three bone meal); bone meal like bone meal. Sugar cane, cactus
-	 * and nether wart, which bone meal doesn't work on, get an extra growth step instead.
+	 * Grows a plant that's still growing by one step, from the growth charge. When the charge runs out the farmer uses
+	 * one Fertilizer (32 steps) or bone meal (8 steps) from the fertilizer slot - or, as before, from a seed slot. So a
+	 * stack of Fertilizer lasts a long time: 2,048 growth steps.
 	 */
 	private void fertilize(ServerLevel level, BlockPos spot, BlockState state) {
+		Block block = state.getBlock();
+		boolean growing = block instanceof CropBlock crop ? !crop.isMaxAge(state)
+				: block instanceof NetherWartBlock ? state.getValue(NetherWartBlock.AGE) < 3
+				: block instanceof net.minecraft.world.level.block.StemBlock ? ((net.minecraft.world.level.block.BonemealableBlock) block).isValidBonemealTarget(level, spot, state, false)
+				: block == Blocks.SUGAR_CANE || block == Blocks.CACTUS;
+		if (!growing) return;
+		if (growthCharge <= 0 && !refuel()) return;
+		net.minecraft.world.level.block.state.properties.IntegerProperty age = ageOf(state);
+		if ((block instanceof CropBlock || block instanceof NetherWartBlock) && age != null) {
+			int max = age.getPossibleValues().stream().mapToInt(Integer::intValue).max().orElse(0);
+			level.setBlock(spot, state.setValue(age, Math.min(max, state.getValue(age) + 1)), Block.UPDATE_CLIENTS);
+		} else if (block instanceof net.minecraft.world.level.block.BonemealableBlock b) {
+			b.performBonemeal(level, level.random, spot, state);
+		} else {
+			// sugar cane and cactus: a few growth ticks
+			for (int n = 0; n < 4 && level.getBlockState(spot).is(block); n++) level.getBlockState(spot).randomTick(level, spot, level.random);
+		}
+		growthCharge--;
+		if (level.random.nextInt(4) == 0) level.levelEvent(1505, spot, 0);
+		setChanged();
+	}
+
+	/** A crop's "age" property, whatever the crop calls it internally. */
+	private static net.minecraft.world.level.block.state.properties.IntegerProperty ageOf(BlockState state) {
+		for (var p : state.getProperties())
+			if (p instanceof net.minecraft.world.level.block.state.properties.IntegerProperty ip && p.getName().equals("age")) return ip;
+		return null;
+	}
+
+	/** Uses one Fertilizer or bone meal for more growth charge. */
+	private boolean refuel() {
 		int slot = -1;
 		if (isFertilizer(items.get(FERTILIZER_SLOT))) slot = FERTILIZER_SLOT;
 		else for (int i = 0; i < SEED_SLOTS && slot < 0; i++) if (isFertilizer(items.get(i))) slot = i;
-		if (slot < 0) return;
+		if (slot < 0) return false;
 		ItemStack s = items.get(slot);
-		boolean strong = s.is(com.robvanblerk.tieredpower.registry.ModBlocks.FERTILIZER.get());
-		Block block = state.getBlock();
-		boolean used = false;
-		if (block instanceof CropBlock crop) {
-			if (crop.isMaxAge(state)) return;
-			if (strong) crop.growCrops(level, spot, state);
-			else crop.performBonemeal(level, level.random, spot, state);
-			used = true;
-		} else if (block instanceof net.minecraft.world.level.block.BonemealableBlock b && b.isValidBonemealTarget(level, spot, state, false)) {
-			for (int n = strong ? 3 : 1; n > 0 && b.isValidBonemealTarget(level, spot, level.getBlockState(spot), false); n--)
-				b.performBonemeal(level, level.random, spot, level.getBlockState(spot));
-			used = true;
-		} else if (block == Blocks.SUGAR_CANE || block == Blocks.CACTUS || block instanceof NetherWartBlock) {
-			for (int n = strong ? 6 : 2; n > 0 && level.getBlockState(spot).is(block); n--) level.getBlockState(spot).randomTick(level, spot, level.random);
-			used = true;
-		}
-		if (!used) return;
-		level.levelEvent(1505, spot, 0);
+		growthCharge += s.is(com.robvanblerk.tieredpower.registry.ModBlocks.FERTILIZER.get()) ? PULSES_PER_FERTILIZER : PULSES_PER_BONE_MEAL;
 		s.shrink(1);
-		setChanged();
+		return true;
+	}
+
+	/**
+	 * Next to a storage cable (or anything else on a storage network), the farmer keeps itself stocked: it tops the
+	 * fertilizer slot up with Fertilizer (or bone meal if there's none) and its seed slots with more of the seeds in them.
+	 */
+	private void restock(Level level, BlockPos pos) {
+		boolean nearNetwork = false;
+		for (Direction d : Direction.values())
+			if (level.getBlockState(pos.relative(d)).getBlock() instanceof com.robvanblerk.tieredpower.storage.StorageNetworkBlock) { nearNetwork = true; break; }
+		if (!nearNetwork) return;
+		var controller = com.robvanblerk.tieredpower.storage.StorageNetwork.findController(level, pos);
+		var network = controller == null ? null : controller.getNetwork();
+		if (network == null) return;
+		ItemStack fert = items.get(FERTILIZER_SLOT);
+		if (fert.getCount() < 32) {
+			for (ItemStack want : new ItemStack[] {new ItemStack(com.robvanblerk.tieredpower.registry.ModBlocks.FERTILIZER.get()), new ItemStack(net.minecraft.world.item.Items.BONE_MEAL)}) {
+				if (!fert.isEmpty() && !ItemStack.isSameItemSameTags(fert, want)) continue;
+				int room = want.getMaxStackSize() - fert.getCount();
+				ItemStack got = network.extract(new com.robvanblerk.tieredpower.storage.ItemKey(want), room, false);
+				if (got.isEmpty()) continue;
+				if (fert.isEmpty()) items.set(FERTILIZER_SLOT, got); else fert.grow(got.getCount());
+				setChanged();
+				break;
+			}
+		}
+		for (int i = 0; i < SEED_SLOTS; i++) {
+			ItemStack s = items.get(i);
+			if (s.isEmpty() || s.getCount() >= 32 || !isPlantable(s)) continue;
+			ItemStack got = network.extract(new com.robvanblerk.tieredpower.storage.ItemKey(s), s.getMaxStackSize() - s.getCount(), false);
+			if (!got.isEmpty()) { s.grow(got.getCount()); setChanged(); }
+		}
 	}
 
 	private void harvest(ServerLevel level, BlockPos spot, BlockState state, BlockState replacement) {
@@ -183,8 +234,8 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 	private void plant(ServerLevel level, BlockPos spot) {
 		for (int i = 0; i < SEED_SLOTS; i++) {
 			ItemStack seeds = items.get(i);
-			if (!(seeds.getItem() instanceof BlockItem blockItem) || !isPlantable(seeds)) continue;
-			Block block = blockItem.getBlock();
+			if (!isPlantable(seeds)) continue;
+			Block block = seeds.getItem() instanceof BlockItem blockItem ? blockItem.getBlock() : Blocks.SUGAR_CANE; // Sugar Cane Seeds
 			BlockState planted = block.defaultBlockState();
 			if (!planted.canSurvive(level, spot)) continue;
 			level.setBlock(spot, planted, Block.UPDATE_ALL);
@@ -221,6 +272,7 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 		super.saveAdditional(tag);
 		tag.putInt("index", index);
 		tag.putInt("harvested", harvested);
+		tag.putInt("growthCharge", growthCharge);
 	}
 
 	@Override
@@ -228,6 +280,7 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 		super.load(tag);
 		index = tag.getInt("index");
 		harvested = tag.getInt("harvested");
+		growthCharge = tag.getInt("growthCharge");
 	}
 
 	// Hoppers: seeds in from the top/sides, harvest out from the bottom.
@@ -254,6 +307,7 @@ public class CropFarmerBlockEntity extends MachineBlockEntity {
 
 	/** Things it can plant: crop seeds, nether wart, melon and pumpkin seeds, sugar cane and cactus. */
 	public static boolean isPlantable(ItemStack stack) {
+		if (stack.is(com.robvanblerk.tieredpower.registry.ModBlocks.SUGAR_CANE_SEEDS.get())) return true;
 		if (!(stack.getItem() instanceof BlockItem b)) return false;
 		Block block = b.getBlock();
 		return block instanceof CropBlock || block instanceof NetherWartBlock || block instanceof net.minecraft.world.level.block.StemBlock

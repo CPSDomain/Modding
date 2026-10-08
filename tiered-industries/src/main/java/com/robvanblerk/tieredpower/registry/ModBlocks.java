@@ -394,6 +394,9 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> GREENHOUSE_GLASS = register("greenhouse_glass", () -> new net.minecraft.world.level.block.GlassBlock(
 			net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.GLASS)));
 	public static final RegistryObject<Item> FERTILIZER = ITEMS.register("fertilizer", () -> new com.robvanblerk.tieredpower.greenhouse.FertilizerItem(new Item.Properties()));
+	public static final RegistryObject<Block> IRRIGATED_SAND = register("irrigated_sand", () -> new com.robvanblerk.tieredpower.greenhouse.IrrigatedSandBlock(
+			BlockBehaviour.Properties.of().mapColor(MapColor.SAND).strength(0.6f).sound(SoundType.SAND)));
+	public static final RegistryObject<Item> SUGAR_CANE_SEEDS = ITEMS.register("sugar_cane_seeds", () -> new com.robvanblerk.tieredpower.greenhouse.SugarCaneSeedsItem(new Item.Properties()));
 
 	// ---- Phase 55: Fluidic Plenisher, Block Mover, Ore Scanner ----
 	public static final RegistryObject<Block> FLUIDIC_PLENISHER = register("fluidic_plenisher", () -> new com.robvanblerk.tieredpower.block.FluidicPlenisherBlock(machine()));
@@ -991,6 +994,8 @@ public final class ModBlocks {
 				output.accept(GROW_LAMP.get());
 				output.accept(GREENHOUSE_GLASS.get());
 				output.accept(FERTILIZER.get());
+				output.accept(SUGAR_CANE_SEEDS.get());
+				output.accept(IRRIGATED_SAND.get());
 				output.accept(BLOCK_BREAKER.get());
 				output.accept(BLOCK_PLACER.get());
 				output.accept(TREE_FARM.get());

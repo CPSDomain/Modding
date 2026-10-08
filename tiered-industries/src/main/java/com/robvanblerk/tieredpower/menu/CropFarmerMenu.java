@@ -13,8 +13,8 @@ import com.robvanblerk.tieredpower.block.entity.CropFarmerBlockEntity;
 import com.robvanblerk.tieredpower.registry.ModMenus;
 
 public class CropFarmerMenu extends MachineMenu {
-	// 0-1 energy, 2 harvested, 3 FE/t
-	public static final int DATA_COUNT = 4;
+	// 0-1 energy, 2 harvested, 3 FE/t, 4 growth charge left
+	public static final int DATA_COUNT = 5;
 	public static final int SEED_X = 30, GRID_X = 98, TOP_Y = 17, FERT_X = 8, FERT_Y = 53;
 
 	private final Container container;
@@ -54,6 +54,7 @@ public class CropFarmerMenu extends MachineMenu {
 	}
 
 	public int getHarvested() { return data.get(2) & 0xFFFF; }
+	public int getGrowthCharge() { return data.get(4); }
 
 	@Override
 	public boolean stillValid(Player player) {

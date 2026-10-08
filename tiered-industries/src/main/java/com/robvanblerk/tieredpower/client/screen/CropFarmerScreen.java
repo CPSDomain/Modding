@@ -17,6 +17,7 @@ public class CropFarmerScreen extends MachineScreen<CropFarmerMenu> {
 		text(g, "Harvested", x + 52, y + 34);
 		text(g, String.format("%,d", menu.getHarvested()), x + 52, y + 44);
 		text(g, menu.getEnergyCost() + " FE/t", x + 52, y + 60);
+		if (menu.getGrowthCharge() > 0) text(g, "Grow " + menu.getGrowthCharge(), x + 8, y + 72);
 		drawEnergyBar(g, x + 156, y + 18, 14, 52);
 	}
 }

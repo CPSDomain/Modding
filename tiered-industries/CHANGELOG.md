@@ -1,5 +1,25 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.69.4 - Irrigated Sand
+
+### Added
+- **Irrigated Sand**: sand for greenhouses. Sugar cane grows on it with no water channel, as long as a Sprinkler with water in it is overhead - within 4 blocks sideways and up to 8 above, the same area a Sprinkler waters. Water beside it works too, like normal sand, and cactus grows on it.
+  - It doesn't fall like sand.
+  - 8 sand around a water bucket makes 8 (you get the bucket back).
+  - Lay it where the farmland would go, in the Crop Farmer's reach, put Sugar Cane Seeds in the farmer, and it plants and harvests the cane with the rest of the greenhouse.
+
+## 1.69.3 - Sugar Cane Seeds, slower fertilizer, Crop Farmer restocking
+
+### Added
+- **Sugar Cane Seeds**: one sugar cane makes two. Plant them by hand or in the Crop Farmer, the same way as sugar cane: on sand, dirt or grass with water right beside that block.
+- **Crop Farmer restocking**: place the farmer next to a storage cable (or any other block of your storage network). Every two seconds it tops up its fertilizer slot from storage - Fertilizer, or bone meal if there's none - and refills its seed slots with more of the seeds already in them.
+
+### Changed
+- **Fertilizer lasts much longer** in the Crop Farmer. Instead of using one per plant, the farmer now grows each plant one step as it passes. One Fertilizer is good for 32 steps and bone meal for 8, so a stack of Fertilizer covers 2,048 growth steps. The screen shows how many steps are left from the last one used.
+
+### How sugar cane planting works
+- The farmer works on its own level, so the sand (or dirt) must be one block below the farmer's level, with water in the block right beside it - for example a row of sand next to a water channel. Sugar cane can't be planted on sand without water beside it - that's how Minecraft works.
+
 ## 1.69.2 - Crop Farmer: sugar cane, cactus, stems and a fertilizer slot
 
 ### Changed
