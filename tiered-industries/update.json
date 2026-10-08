@@ -1,6 +1,7 @@
 {
   "homepage": "https://github.com/CPSDomain/Modding/releases",
   "1.20.1": {
+    "1.69.2": "Crop Farmer: sugar cane, cactus, stems and a fertilizer slot",
     "1.69.1": "GitHub releases and update checker",
     "1.69.0": "Balance pass",
     "1.68.0": "Hidden-world materials and more upgradable machines",
@@ -115,7 +116,7 @@
     "0.1": "0.3 - Coal, steam, fusion"
   },
   "promos": {
-    "1.20.1-latest": "1.69.1",
-    "1.20.1-recommended": "1.69.1"
+    "1.20.1-latest": "1.69.2",
+    "1.20.1-recommended": "1.69.2"
   }
 }

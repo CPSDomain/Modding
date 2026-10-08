@@ -30,6 +30,11 @@ public abstract class MachineMenu extends AbstractContainerMenu {
 	private final Set<Integer> bigSlots = new HashSet<>();
 	/** Empty upgrade slots show a faded picture of the item they take. */
 	private final Map<Integer, ItemStack> ghostItems = new HashMap<>();
+
+	/** Shows a faded picture of what an empty slot takes. */
+	protected void setGhostItem(int slotIndex, ItemStack stack) {
+		ghostItems.put(slotIndex, stack);
+	}
 	private int speedSlot = -1;
 	private int costDataIndex = -1;
 

@@ -1,5 +1,18 @@
 # Changelog - Tiered Industries (formerly Tiered Power)
 
+## 1.69.2 - Crop Farmer: sugar cane, cactus, stems and a fertilizer slot
+
+### Changed
+- The **Crop Farmer** now plants more than crop seeds. Its seed slots take:
+  - **Sugar cane** (sugar cane is its own seed, so put a stack of sugar cane in). It's planted on sand or dirt next to water.
+  - **Cactus**, planted on sand.
+  - **Melon and pumpkin seeds**, planted on farmland.
+- It now also harvests cactus (leaving the bottom block, like sugar cane).
+- **Fertilizer slot**: a slot of its own on the far left, which also takes bone meal. The farmer uses one on each plant it passes that's still growing. That now includes melon and pumpkin stems, sugar cane, cactus and nether wart as well as crops. Fertilizer counts as about three bone meal.
+
+### Fixed
+- Fertilizer couldn't be put into the Crop Farmer by hand - only hoppers could add it. It now has its own slot (fertilizer already in a seed slot still gets used).
+
 ## 1.69.1 - GitHub releases and update checker
 
 ### Changed
