@@ -1,0 +1,221 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_core"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm"
+      }
+    },
+    {
+      "when": {
+        "north": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract"
+      }
+    },
+    {
+      "when": {
+        "north": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both"
+      }
+    },
+    {
+      "when": {
+        "north": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "down": "pipe"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_arm",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "extract"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_extract",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "both"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_both",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/basic_item_pipe_disabled",
+        "x": 90
+      }
+    }
+  ]
+}

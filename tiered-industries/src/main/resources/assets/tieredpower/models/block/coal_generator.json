@@ -1,0 +1,197 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "tieredpower:block/machine_side",
+    "front": "tieredpower:block/coal_generator_front",
+    "side": "tieredpower:block/machine_side",
+    "top": "tieredpower:block/machine_top",
+    "chimney": "minecraft:block/bricks",
+    "soot": "minecraft:block/black_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#front",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#side",
+          "cullface": "south"
+        },
+        "east": {
+          "texture": "#side",
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#side",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#top",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#top",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [
+        10,
+        16,
+        10
+      ],
+      "to": [
+        15,
+        23,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            5,
+            7
+          ]
+        },
+        "south": {
+          "texture": "#chimney",
+          "uv": [
+            5,
+            0,
+            10,
+            7
+          ]
+        },
+        "east": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            7,
+            5,
+            14
+          ]
+        },
+        "west": {
+          "texture": "#chimney",
+          "uv": [
+            5,
+            7,
+            10,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#soot",
+          "uv": [
+            0,
+            0,
+            5,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        9.5,
+        22,
+        9.5
+      ],
+      "to": [
+        15.5,
+        23.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            6,
+            1.5
+          ]
+        },
+        "south": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            6,
+            1.5
+          ]
+        },
+        "east": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            6,
+            1.5
+          ]
+        },
+        "west": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            6,
+            1.5
+          ]
+        },
+        "down": {
+          "texture": "#chimney",
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ]
+        },
+        "up": {
+          "texture": "#soot",
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        -1,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/wireless_access_point"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/wireless_access_point_on"
+    }
+  }
+}

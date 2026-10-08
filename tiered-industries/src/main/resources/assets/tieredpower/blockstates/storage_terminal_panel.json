@@ -1,0 +1,512 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel"
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_terminal_panel",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_arm",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_cable_core"
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link"
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "up"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "facing": "down"
+      },
+      "apply": {
+        "model": "tieredpower:block/storage_panel_link",
+        "x": 90
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x,hidden=false": {
+      "model": "tieredpower:block/event_horizon"
+    },
+    "axis=z,hidden=false": {
+      "model": "tieredpower:block/event_horizon",
+      "y": 90
+    },
+    "axis=x,hidden=true": {
+      "model": "tieredpower:block/event_horizon_hidden"
+    },
+    "axis=z,hidden=true": {
+      "model": "tieredpower:block/event_horizon_hidden"
+    }
+  }
+}

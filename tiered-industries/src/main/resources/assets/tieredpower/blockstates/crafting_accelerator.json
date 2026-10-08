@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "tier=0": {
+      "model": "tieredpower:block/crafting_accelerator"
+    },
+    "tier=1": {
+      "model": "tieredpower:block/crafting_accelerator_t1"
+    },
+    "tier=2": {
+      "model": "tieredpower:block/crafting_accelerator_t2"
+    },
+    "tier=3": {
+      "model": "tieredpower:block/crafting_accelerator_t3"
+    }
+  }
+}

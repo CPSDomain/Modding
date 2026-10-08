@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "tier=0": {
+      "model": "tieredpower:block/crafting_cpu"
+    },
+    "tier=1": {
+      "model": "tieredpower:block/crafting_cpu_t1"
+    },
+    "tier=2": {
+      "model": "tieredpower:block/crafting_cpu_t2"
+    },
+    "tier=3": {
+      "model": "tieredpower:block/crafting_cpu_t3"
+    }
+  }
+}

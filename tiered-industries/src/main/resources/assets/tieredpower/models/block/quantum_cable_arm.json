@@ -1,0 +1,7 @@
+{
+  "parent": "tieredpower:block/cable_arm_template",
+  "textures": {
+    "cable": "tieredpower:block/quantum_cable",
+    "particle": "tieredpower:block/quantum_cable"
+  }
+}

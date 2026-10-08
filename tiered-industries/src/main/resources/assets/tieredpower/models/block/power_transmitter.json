@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/power_transmitter_side",
+    "top": "tieredpower:block/power_transmitter_top",
+    "bottom": "tieredpower:block/machine_top"
+  }
+}

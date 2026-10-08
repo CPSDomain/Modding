@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/cryo_injector"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/cryo_injector_on"
+    }
+  }
+}

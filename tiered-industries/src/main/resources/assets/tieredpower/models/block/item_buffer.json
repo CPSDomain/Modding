@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "tieredpower:block/item_buffer_front",
+    "side": "tieredpower:block/item_buffer_side",
+    "top": "tieredpower:block/item_buffer_side"
+  }
+}

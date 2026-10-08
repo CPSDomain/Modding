@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "tieredpower:block/fuel_assembly_side",
+    "end": "tieredpower:block/fuel_assembly_end"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "tieredpower:block/fuel_assembly"
+    },
+    "active=true": {
+      "model": "tieredpower:block/fuel_assembly_active"
+    }
+  }
+}

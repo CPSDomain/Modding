@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "tieredpower:block/bank_controller_front_on",
+    "side": "tieredpower:block/bank_casing",
+    "top": "tieredpower:block/bank_casing"
+  }
+}

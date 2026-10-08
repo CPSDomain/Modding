@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,status=0": {
+      "model": "tieredpower:block/machine_status_display_0"
+    },
+    "facing=north,status=1": {
+      "model": "tieredpower:block/machine_status_display_1"
+    },
+    "facing=north,status=2": {
+      "model": "tieredpower:block/machine_status_display_2"
+    },
+    "facing=east,status=0": {
+      "model": "tieredpower:block/machine_status_display_0",
+      "y": 90
+    },
+    "facing=east,status=1": {
+      "model": "tieredpower:block/machine_status_display_1",
+      "y": 90
+    },
+    "facing=east,status=2": {
+      "model": "tieredpower:block/machine_status_display_2",
+      "y": 90
+    },
+    "facing=south,status=0": {
+      "model": "tieredpower:block/machine_status_display_0",
+      "y": 180
+    },
+    "facing=south,status=1": {
+      "model": "tieredpower:block/machine_status_display_1",
+      "y": 180
+    },
+    "facing=south,status=2": {
+      "model": "tieredpower:block/machine_status_display_2",
+      "y": 180
+    },
+    "facing=west,status=0": {
+      "model": "tieredpower:block/machine_status_display_0",
+      "y": 270
+    },
+    "facing=west,status=1": {
+      "model": "tieredpower:block/machine_status_display_1",
+      "y": 270
+    },
+    "facing=west,status=2": {
+      "model": "tieredpower:block/machine_status_display_2",
+      "y": 270
+    }
+  }
+}

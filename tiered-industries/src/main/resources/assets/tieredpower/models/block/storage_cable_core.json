@@ -1,0 +1,7 @@
+{
+  "parent": "tieredpower:block/cable_core_template",
+  "textures": {
+    "cable": "tieredpower:block/storage_cable",
+    "particle": "tieredpower:block/storage_cable"
+  }
+}

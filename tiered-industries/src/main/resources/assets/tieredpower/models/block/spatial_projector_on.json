@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "tieredpower:block/spatial_projector_front_on",
+    "side": "tieredpower:block/machine_side",
+    "top": "tieredpower:block/spatial_projector_top"
+  }
+}

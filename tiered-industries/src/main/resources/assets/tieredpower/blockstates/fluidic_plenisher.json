@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/fluidic_plenisher"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/fluidic_plenisher"
+    }
+  }
+}

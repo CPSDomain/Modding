@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tieredpower:block/creative_energy_cell"
+    }
+  }
+}

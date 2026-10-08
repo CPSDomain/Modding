@@ -1,0 +1,7 @@
+{
+  "parent": "tieredpower:block/pipe_disabled_template",
+  "textures": {
+    "pipe": "tieredpower:block/quantum_fluid_pipe",
+    "particle": "tieredpower:block/quantum_fluid_pipe"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/grow_lamp"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/grow_lamp_on"
+    }
+  }
+}

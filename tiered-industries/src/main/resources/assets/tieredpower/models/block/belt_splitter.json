@@ -1,0 +1,8 @@
+{
+  "parent": "tieredpower:block/conveyor_flat",
+  "textures": {
+    "top": "tieredpower:block/belt_splitter_top",
+    "side": "tieredpower:block/conveyor_side_express",
+    "bottom": "tieredpower:block/conveyor_bottom"
+  }
+}

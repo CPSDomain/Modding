@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "axis=x,formed=false,master=false,ring=false": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=z,formed=false,master=false,ring=false": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=x,formed=false,master=false,ring=true": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=z,formed=false,master=false,ring=true": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=x,formed=false,master=true,ring=false": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=z,formed=false,master=true,ring=false": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=x,formed=false,master=true,ring=true": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=z,formed=false,master=true,ring=true": {
+      "model": "tieredpower:block/stargate_frame"
+    },
+    "axis=x,formed=true,master=false,ring=false": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=z,formed=true,master=false,ring=false": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=x,formed=true,master=false,ring=true": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=z,formed=true,master=false,ring=true": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=x,formed=true,master=true,ring=false": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=z,formed=true,master=true,ring=false": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=x,formed=true,master=true,ring=true": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    },
+    "axis=z,formed=true,master=true,ring=true": {
+      "model": "tieredpower:block/stargate_frame_formed"
+    }
+  }
+}

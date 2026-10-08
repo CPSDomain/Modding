@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/antimatter_reactor"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/antimatter_reactor_on"
+    }
+  }
+}

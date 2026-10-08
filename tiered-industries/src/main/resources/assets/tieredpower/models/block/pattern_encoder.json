@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "tieredpower:block/pattern_encoder_top",
+    "side": "tieredpower:block/storage_side",
+    "bottom": "tieredpower:block/storage_top"
+  }
+}

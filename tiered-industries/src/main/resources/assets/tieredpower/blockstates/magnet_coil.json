@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "tieredpower:block/magnet_coil"
+    },
+    "active=true": {
+      "model": "tieredpower:block/magnet_coil_active"
+    }
+  }
+}

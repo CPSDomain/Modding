@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/lightning_collector_side",
+    "top": "tieredpower:block/lightning_collector_top",
+    "bottom": "tieredpower:block/machine_top"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "tieredpower:block/grow_lamp_shade",
+    "metal": "tieredpower:block/greenhouse_metal",
+    "shade": "tieredpower:block/grow_lamp_shade",
+    "bulb": "tieredpower:block/grow_lamp_bulb"
+  },
+  "elements": [
+    {
+      "from": [
+        7.5,
+        10,
+        7.5
+      ],
+      "to": [
+        8.5,
+        16,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        7,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#shade"
+        },
+        "south": {
+          "texture": "#shade"
+        },
+        "east": {
+          "texture": "#shade"
+        },
+        "west": {
+          "texture": "#shade"
+        },
+        "up": {
+          "texture": "#shade"
+        },
+        "down": {
+          "texture": "#bulb"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        6,
+        4
+      ],
+      "to": [
+        12,
+        7,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bulb"
+        },
+        "south": {
+          "texture": "#bulb"
+        },
+        "east": {
+          "texture": "#bulb"
+        },
+        "west": {
+          "texture": "#bulb"
+        },
+        "up": {
+          "texture": "#bulb"
+        },
+        "down": {
+          "texture": "#bulb"
+        }
+      }
+    }
+  ]
+}

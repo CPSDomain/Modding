@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tieredpower:block/energy_meter"
+    },
+    "facing=east": {
+      "model": "tieredpower:block/energy_meter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tieredpower:block/energy_meter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tieredpower:block/energy_meter",
+      "y": 270
+    }
+  }
+}

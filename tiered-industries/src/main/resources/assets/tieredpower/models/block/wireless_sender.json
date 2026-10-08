@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/wireless_sender_side",
+    "top": "tieredpower:block/wireless_sender_top",
+    "bottom": "tieredpower:block/machine_top"
+  }
+}

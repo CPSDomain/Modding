@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "tieredpower:block/magnet_coil_side",
+    "end": "tieredpower:block/magnet_coil_end"
+  }
+}

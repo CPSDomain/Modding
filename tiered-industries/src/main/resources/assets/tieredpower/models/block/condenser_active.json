@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/condenser_side_active",
+    "top": "tieredpower:block/condenser_top",
+    "bottom": "tieredpower:block/condenser_top"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/diesel_generator"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/diesel_generator_on"
+    }
+  }
+}

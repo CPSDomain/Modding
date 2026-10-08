@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tieredpower:block/belt_splitter"
+    },
+    "facing=east": {
+      "model": "tieredpower:block/belt_splitter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tieredpower:block/belt_splitter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tieredpower:block/belt_splitter",
+      "y": 270
+    }
+  }
+}

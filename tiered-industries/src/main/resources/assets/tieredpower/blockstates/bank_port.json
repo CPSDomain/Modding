@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "mode=input": {
+      "model": "tieredpower:block/bank_port_input"
+    },
+    "mode=output": {
+      "model": "tieredpower:block/bank_port_output"
+    }
+  }
+}

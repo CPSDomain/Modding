@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tieredpower:block/basic_fluid_tank"
+    }
+  }
+}

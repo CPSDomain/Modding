@@ -1,0 +1,163 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input"
+      }
+    },
+    {
+      "when": {
+        "north": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output"
+      }
+    },
+    {
+      "when": {
+        "north": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled"
+      }
+    },
+    {
+      "when": {
+        "east": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "down": "input"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_input",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "output"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_output",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "disabled"
+      },
+      "apply": {
+        "model": "tieredpower:block/quantum_battery_box_disabled",
+        "x": 90
+      }
+    }
+  ]
+}

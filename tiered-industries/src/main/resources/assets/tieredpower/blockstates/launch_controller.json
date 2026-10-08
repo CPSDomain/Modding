@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tieredpower:block/launch_controller"
+    },
+    "facing=east": {
+      "model": "tieredpower:block/launch_controller",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tieredpower:block/launch_controller",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tieredpower:block/launch_controller",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/fluidic_plenisher_side",
+    "top": "tieredpower:block/fluidic_plenisher_top",
+    "bottom": "tieredpower:block/fluidic_plenisher_bottom"
+  }
+}

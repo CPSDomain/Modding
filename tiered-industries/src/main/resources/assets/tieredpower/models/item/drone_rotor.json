@@ -1,0 +1,105 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "r": "tieredpower:block/drone_rotor",
+    "particle": "tieredpower:block/drone_rotor"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        8,
+        7.5
+      ],
+      "to": [
+        13,
+        8.4,
+        8.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#r"
+        },
+        "up": {
+          "texture": "#r"
+        },
+        "north": {
+          "texture": "#r"
+        },
+        "south": {
+          "texture": "#r"
+        },
+        "west": {
+          "texture": "#r"
+        },
+        "east": {
+          "texture": "#r"
+        }
+      }
+    },
+    {
+      "from": [
+        7.5,
+        8,
+        3
+      ],
+      "to": [
+        8.5,
+        8.4,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#r"
+        },
+        "up": {
+          "texture": "#r"
+        },
+        "north": {
+          "texture": "#r"
+        },
+        "south": {
+          "texture": "#r"
+        },
+        "west": {
+          "texture": "#r"
+        },
+        "east": {
+          "texture": "#r"
+        }
+      }
+    },
+    {
+      "from": [
+        7.25,
+        7.4,
+        7.25
+      ],
+      "to": [
+        8.75,
+        8.8,
+        8.75
+      ],
+      "faces": {
+        "down": {
+          "texture": "#r"
+        },
+        "up": {
+          "texture": "#r"
+        },
+        "north": {
+          "texture": "#r"
+        },
+        "south": {
+          "texture": "#r"
+        },
+        "west": {
+          "texture": "#r"
+        },
+        "east": {
+          "texture": "#r"
+        }
+      }
+    }
+  ]
+}

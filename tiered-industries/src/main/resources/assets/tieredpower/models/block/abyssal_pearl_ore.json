@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tieredpower:block/abyssal_pearl_ore"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "parent": "tieredpower:block/machine_connector",
+  "overrides": [
+    {
+      "predicate": {
+        "tieredpower:tier": 1
+      },
+      "model": "tieredpower:item/machine_connector_t1"
+    },
+    {
+      "predicate": {
+        "tieredpower:tier": 2
+      },
+      "model": "tieredpower:item/machine_connector_t2"
+    },
+    {
+      "predicate": {
+        "tieredpower:tier": 3
+      },
+      "model": "tieredpower:item/machine_connector_t3"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "power=0": {
+      "model": "tieredpower:block/redstone_transmitter"
+    },
+    "power=1": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=2": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=3": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=4": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=5": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=6": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=7": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=8": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=9": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=10": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=11": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=12": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=13": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=14": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    },
+    "power=15": {
+      "model": "tieredpower:block/redstone_transmitter_on"
+    }
+  }
+}

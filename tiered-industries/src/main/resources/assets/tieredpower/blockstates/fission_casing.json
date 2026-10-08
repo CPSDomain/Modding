@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tieredpower:block/fission_casing"
+    }
+  }
+}

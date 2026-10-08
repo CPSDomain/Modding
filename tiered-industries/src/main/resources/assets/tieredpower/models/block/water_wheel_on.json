@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "tieredpower:block/water_wheel_side_on",
+    "top": "tieredpower:block/water_wheel_top",
+    "bottom": "tieredpower:block/machine_top"
+  }
+}

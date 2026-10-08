@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "tieredpower:block/storage_controller_front_on",
+    "side": "tieredpower:block/storage_side",
+    "top": "tieredpower:block/storage_top"
+  }
+}

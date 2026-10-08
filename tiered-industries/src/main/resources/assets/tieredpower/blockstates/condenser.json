@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "tieredpower:block/condenser"
+    },
+    "active=true": {
+      "model": "tieredpower:block/condenser_active"
+    }
+  }
+}

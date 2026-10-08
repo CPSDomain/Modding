@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/lightning_collector"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/lightning_collector_on"
+    }
+  }
+}

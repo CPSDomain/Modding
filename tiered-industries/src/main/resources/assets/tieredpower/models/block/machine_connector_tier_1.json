@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "overlay": "tieredpower:block/crafting_tier_1",
+    "particle": "tieredpower:block/storage_side"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        1,
+        12.9
+      ],
+      "to": [
+        15,
+        15,
+        12.9
+      ],
+      "shade": false,
+      "forge_data": {
+        "block_light": 15,
+        "sky_light": 15
+      },
+      "faces": {
+        "north": {
+          "texture": "#overlay",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    }
+  ]
+}

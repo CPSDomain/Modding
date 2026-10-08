@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=north,lit=false,size=0": {
+      "model": "tieredpower:block/spatial_projector"
+    },
+    "facing=north,lit=false,size=1": {
+      "model": "tieredpower:block/spatial_projector"
+    },
+    "facing=north,lit=false,size=2": {
+      "model": "tieredpower:block/spatial_projector"
+    },
+    "facing=north,lit=false,size=3": {
+      "model": "tieredpower:block/spatial_projector"
+    },
+    "facing=north,lit=true,size=0": {
+      "model": "tieredpower:block/spatial_projector_on"
+    },
+    "facing=north,lit=true,size=1": {
+      "model": "tieredpower:block/spatial_projector_on"
+    },
+    "facing=north,lit=true,size=2": {
+      "model": "tieredpower:block/spatial_projector_on"
+    },
+    "facing=north,lit=true,size=3": {
+      "model": "tieredpower:block/spatial_projector_on"
+    },
+    "facing=east,lit=false,size=0": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 90
+    },
+    "facing=east,lit=false,size=1": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 90
+    },
+    "facing=east,lit=false,size=2": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 90
+    },
+    "facing=east,lit=false,size=3": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 90
+    },
+    "facing=east,lit=true,size=0": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 90
+    },
+    "facing=east,lit=true,size=1": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 90
+    },
+    "facing=east,lit=true,size=2": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 90
+    },
+    "facing=east,lit=true,size=3": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 90
+    },
+    "facing=south,lit=false,size=0": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 180
+    },
+    "facing=south,lit=false,size=1": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 180
+    },
+    "facing=south,lit=false,size=2": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 180
+    },
+    "facing=south,lit=false,size=3": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 180
+    },
+    "facing=south,lit=true,size=0": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 180
+    },
+    "facing=south,lit=true,size=1": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 180
+    },
+    "facing=south,lit=true,size=2": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 180
+    },
+    "facing=south,lit=true,size=3": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 180
+    },
+    "facing=west,lit=false,size=0": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 270
+    },
+    "facing=west,lit=false,size=1": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 270
+    },
+    "facing=west,lit=false,size=2": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 270
+    },
+    "facing=west,lit=false,size=3": {
+      "model": "tieredpower:block/spatial_projector",
+      "y": 270
+    },
+    "facing=west,lit=true,size=0": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 270
+    },
+    "facing=west,lit=true,size=1": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 270
+    },
+    "facing=west,lit=true,size=2": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 270
+    },
+    "facing=west,lit=true,size=3": {
+      "model": "tieredpower:block/spatial_projector_on",
+      "y": 270
+    }
+  }
+}

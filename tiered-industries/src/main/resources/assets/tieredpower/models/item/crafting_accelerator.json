@@ -1,0 +1,23 @@
+{
+  "parent": "tieredpower:block/crafting_accelerator",
+  "overrides": [
+    {
+      "predicate": {
+        "tieredpower:tier": 1
+      },
+      "model": "tieredpower:item/crafting_accelerator_t1"
+    },
+    {
+      "predicate": {
+        "tieredpower:tier": 2
+      },
+      "model": "tieredpower:item/crafting_accelerator_t2"
+    },
+    {
+      "predicate": {
+        "tieredpower:tier": 3
+      },
+      "model": "tieredpower:item/crafting_accelerator_t3"
+    }
+  ]
+}

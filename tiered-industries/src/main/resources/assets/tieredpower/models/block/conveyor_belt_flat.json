@@ -1,0 +1,8 @@
+{
+  "parent": "tieredpower:block/conveyor_flat",
+  "textures": {
+    "top": "tieredpower:block/conveyor_top_basic",
+    "side": "tieredpower:block/conveyor_side_basic",
+    "bottom": "tieredpower:block/conveyor_bottom"
+  }
+}

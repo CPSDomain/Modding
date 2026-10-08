@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "tieredpower:block/industrial_blast_furnace_front",
+    "side": "tieredpower:block/industrial_blast_furnace_side",
+    "top": "tieredpower:block/industrial_blast_furnace_side"
+  }
+}

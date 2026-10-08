@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "tieredpower:block/geothermal_generator"
+    },
+    "lit=true": {
+      "model": "tieredpower:block/geothermal_generator_on"
+    }
+  }
+}

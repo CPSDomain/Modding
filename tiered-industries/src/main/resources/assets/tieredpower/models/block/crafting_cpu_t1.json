@@ -1,0 +1,7 @@
+{
+  "parent": "tieredpower:block/crafting_tier_overlay",
+  "textures": {
+    "all": "tieredpower:block/crafting_cpu",
+    "overlay": "tieredpower:block/crafting_tier_1"
+  }
+}

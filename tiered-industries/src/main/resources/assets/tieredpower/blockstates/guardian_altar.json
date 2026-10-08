@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "spent=false": {
+      "model": "tieredpower:block/guardian_altar"
+    },
+    "spent=true": {
+      "model": "tieredpower:block/guardian_altar_spent"
+    }
+  }
+}

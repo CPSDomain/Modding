@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tieredpower:block/stellar_solar_panel"
+    }
+  }
+}

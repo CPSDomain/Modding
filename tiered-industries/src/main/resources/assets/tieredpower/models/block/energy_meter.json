@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tieredpower:block/machine_side",
+    "north": "tieredpower:block/meter_screen",
+    "south": "tieredpower:block/machine_side",
+    "east": "tieredpower:block/meter_in",
+    "west": "tieredpower:block/meter_out",
+    "up": "tieredpower:block/meter_top",
+    "down": "tieredpower:block/machine_top"
+  }
+}

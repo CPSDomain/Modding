@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "tieredpower:block/steam_turbine"
+    },
+    "facing=north,lit=true": {
+      "model": "tieredpower:block/steam_turbine_on"
+    },
+    "facing=east,lit=false": {
+      "model": "tieredpower:block/steam_turbine"
+    },
+    "facing=east,lit=true": {
+      "model": "tieredpower:block/steam_turbine_on"
+    },
+    "facing=south,lit=false": {
+      "model": "tieredpower:block/steam_turbine"
+    },
+    "facing=south,lit=true": {
+      "model": "tieredpower:block/steam_turbine_on"
+    },
+    "facing=west,lit=false": {
+      "model": "tieredpower:block/steam_turbine"
+    },
+    "facing=west,lit=true": {
+      "model": "tieredpower:block/steam_turbine_on"
+    }
+  }
+}

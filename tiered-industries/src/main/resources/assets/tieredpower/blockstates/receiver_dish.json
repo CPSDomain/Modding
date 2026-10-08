@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tieredpower:block/receiver_dish"
+    },
+    "facing=east": {
+      "model": "tieredpower:block/receiver_dish",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tieredpower:block/receiver_dish",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tieredpower:block/receiver_dish",
+      "y": 270
+    }
+  }
+}
